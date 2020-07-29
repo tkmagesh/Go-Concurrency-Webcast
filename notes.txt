@@ -1,0 +1,66 @@
+Go
+    another PL
+    * Built for concurrency
+
+    simplifying the language features
+        25 keywords
+
+        No implicit conversions
+        No classes (only structs & functions)
+        No inheritance (only composition)
+        No generics
+        No immutable
+
+        Support for pointers
+
+
+Multi Threading
+    Race conditions & dead locks
+
+Single Threading (Event Loop) (ex Node.js)
+    Suited for IO
+    Extremely complicated to solve CPU intensive operations
+
+
+Threading is a solution offered through APIs
+    
+    var x = 100;
+
+    var fn = () => {
+        lock();
+        x + 10;
+        unlock()
+    }
+    var t1 = new Thread(fn)
+    var t2 = new Thread(fn)
+
+goroutine
+
+    go fn()
+    channels
+    select & range
+
+    sync package
+        No shared state
+
+
+Threads are costly
+
+ch chan
+
+f1(){
+    ch <- x
+}
+
+f2(){
+    y := <- ch
+    //some code
+}
+
+f2()
+f1()
+
+Higher Order Functions
+    Functions as first class objects
+
+First Order Functions
